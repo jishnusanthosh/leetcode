@@ -1,0 +1,10 @@
+func findWordsContaining(words []string, x byte) []int {
+    var indices []int
+    for i,w:=range words{
+        if strings.Contains(w,string(x)){
+            indices=append(indices,i)
+        }
+    }
+    return indices
+
+}
