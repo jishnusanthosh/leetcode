@@ -1,0 +1,14 @@
+var mostWordsFound = function(sentences) {
+     let maxWordCount = 0;
+
+    for (let i = 0; i < sentences.length; i++) {
+        const words = sentences[i].split(' ');
+        const wordCount = words.length;
+
+        if (wordCount > maxWordCount) {
+            maxWordCount = wordCount;
+        }
+    }
+
+    return maxWordCount;
+};
