@@ -1,0 +1,12 @@
+var smallerNumbersThanCurrent = function(nums) {
+   const hashTable = {};
+    const sortedNums = [...nums].sort((a, b) => a - b);
+
+    for (let i = 0; i < sortedNums.length; i++) {
+        if (!(sortedNums[i] in hashTable)) {
+            hashTable[sortedNums[i]] = i;
+        }
+    }
+
+    return nums.map(num => hashTable[num]);
+};
