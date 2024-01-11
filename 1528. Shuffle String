@@ -1,0 +1,13 @@
+var restoreString = function(s, indices) {
+    const n=s.length
+    let shuffledString=new Array(n)
+
+    for(i=0;i<=n;i++){
+        shuffledString[indices[i]]=s[i]
+        
+
+    }
+    return shuffledString.join('')
+
+
+};
