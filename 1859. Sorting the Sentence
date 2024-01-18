@@ -1,0 +1,7 @@
+var sortSentence = function(s) {
+     const words = s.split(' ');
+     const sortedWords = words.sort((a, b) => parseInt(a.slice(-1)) - parseInt(b.slice(-1)));  
+    const originalSentence = sortedWords.map(word => word.slice(0, -1)).join(' '); 
+    return originalSentence;
+
+};
