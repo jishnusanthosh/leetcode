@@ -1,0 +1,12 @@
+var cellsInRange = function(s) {
+    const [col1, row1, col2, row2] = [s[0], +s[1], s[3], +s[4]];
+    const result = [];
+    for (let row = row1; row <= row2; row++) {
+        for (let col = col1.charCodeAt(0); col <= col2.charCodeAt(0); col++) {
+            result.push(String.fromCharCode(col) + row);
+        }
+    }
+    result.sort();
+    return result;
+
+};
