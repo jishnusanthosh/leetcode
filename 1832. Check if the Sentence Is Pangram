@@ -1,0 +1,12 @@
+var checkIfPangram = function(sentence) {
+
+    let letters = new Set();
+    for (let i = 0; i < sentence.length; i++) {
+        letters.add(sentence[i]);
+        if (letters.size === 26) {
+            return true;
+        }
+    }
+
+    return false;
+};
