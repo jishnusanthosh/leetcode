@@ -1,0 +1,22 @@
+var uniqueMorseRepresentations = function(words) {
+     const morseCodeMapping = [
+    ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
+    "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
+    "..-", "...-", ".--", "-..-", "-.--", "--.."
+  ];
+
+  // Function to convert a word to Morse code
+  const wordToMorse = (word) => {
+    return word.split('').map(char => morseCodeMapping[char.charCodeAt(0) - 'a'.charCodeAt(0)]).join('');
+  };
+
+  const transformations = new Set();
+
+  // Iterate through each word and add its Morse code transformation to the set
+  words.forEach(word => {
+    transformations.add(wordToMorse(word));
+  });
+
+  // Return the size of the set, which represents the number of unique transformations
+  return transformations.size;
+};
